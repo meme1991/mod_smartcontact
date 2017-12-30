@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+  <name>MOD_SMARTCONTACT</name>
+	<author>SPEDI srl</author>
+	<creationDate>Gennaio 2017</creationDate>
+	<copyright>Copyright (C) 1991 - 2016 SPEDI srl. Tutti i diritti riservati.</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<authorEmail>sviluppo@spedi.it</authorEmail>
+	<authorUrl>http://www.spedi.it</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_SMARTCONTACT_DESC</description>
+
+    <files>
+        <filename>mod_smartcontact.xml</filename>
+        <filename module="mod_smartcontact">mod_smartcontact.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+      <fields name="params">
+        <fieldset name="basic" addfieldpath="/administrator/components/com_menus/models/fields">
+          <field type="spacer" name="text-label" label="MOD_SMARTCONTACT_TEXT_LABEL" />
+          <field
+            name="text-yn"
+            type="radio"
+            label="MOD_SMARTCONTACT_TEXTYN"
+            description="MOD_SMARTCONTACT_TEXTYN_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+            name="text"
+            type="textarea"
+            label="MOD_SMARTCONTACT_TEXT"
+            description="MOD_SMARTCONTACT_TEXT_DESC"
+            filter="HTML"
+            showon="text-yn:1"
+          />
+
+          <field
+            name="text-position"
+            type="radio"
+            label="MOD_SMARTCONTACT_TEXTPOS"
+            description="MOD_SMARTCONTACT_TEXTPOS_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+            showon="text-yn:1"
+            >
+            <option value="1">Sopra</option>
+            <option value="0">Sotto</option>
+          </field>
+
+          <field type="spacer" name="address-label" label="MOD_SMARTCONTACT_ADDRESS_LABEL" />
+          <field
+            name="address-yn"
+            type="radio"
+            label="MOD_SMARTCONTACT_ADDRESSYN"
+            description="MOD_SMARTCONTACT_ADDRESSYN_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+            name="address"
+            type="textarea"
+            label="MOD_SMARTCONTACT_ADDRESS"
+            description="MOD_SMARTCONTACT_ADDRESS_DESC"
+            showon="address-yn:1"
+          />
+
+          <field type="spacer" name="tel-label" label="MOD_SMARTCONTACT_TEL_LABEL" />
+          <field
+            name="tel-yn"
+            type="radio"
+            label="MOD_SMARTCONTACT_TELYN"
+            description="MOD_SMARTCONTACT_TELYN_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+            name="tel-1"
+            type="text"
+            label="MOD_SMARTCONTACT_TEL_PRIMARY"
+            description="MOD_SMARTCONTACT_TEL_DESC_PRIMARY"
+            showon="tel-yn:1"
+          />
+          <field
+            name="tel-2"
+            type="text"
+            label="MOD_SMARTCONTACT_TEL_SECONDARY"
+            description="MOD_SMARTCONTACT_TEL_DESC_SECONDARY"
+            showon="tel-yn:1"
+          />
+
+          <field type="spacer" name="fax-label" label="MOD_SMARTCONTACT_FAX_LABEL" />
+          <field
+            name="fax-yn"
+            type="radio"
+            label="MOD_SMARTCONTACT_FAXYN"
+            description="MOD_SMARTCONTACT_FAXYN_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+            name="fax"
+            type="text"
+            label="MOD_SMARTCONTACT_FAX"
+            description="MOD_SMARTCONTACT_FAX_DESC"
+            showon="fax-yn:1"
+          />
+
+          <field type="spacer" name="email-label" label="MOD_SMARTCONTACT_EMAIL_LABEL" />
+          <field
+            name="email-yn"
+            type="radio"
+            label="MOD_SMARTCONTACT_EMAILYN"
+            description="MOD_SMARTCONTACT_EMAILYN_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+            name="email-1"
+            type="email"
+            label="MOD_SMARTCONTACT_EMAIL_PRIMARY"
+            description="MOD_SMARTCONTACT_EMAIL_DESC_PRIMARY"
+            showon="email-yn:1"
+          />
+          <field
+            name="email-2"
+            type="email"
+            label="MOD_SMARTCONTACT_EMAIL_SECONDARY"
+            description="MOD_SMARTCONTACT_EMAIL_DESC_SECONDARY"
+            showon="email-yn:1"
+          />
+          <field
+            name="pec"
+            type="email"
+            label="MOD_SMARTCONTACT_PEC"
+            description="MOD_SMARTCONTACT_PEC_DESC"
+            showon="email-yn:1"
+          />
+
+          <field
+            name="office-yn"
+            type="radio"
+            label="MOD_SMARTCONTACT_OFFICEYN"
+            description="MOD_SMARTCONTACT_OFFICEYN_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+  					name="office"
+  					type="modal_menu"
+  					label="MOD_SMARTCONTACT_OFFICE"
+  					description="MOD_SMARTCONTACT_OFFICE_DESC"
+  					select="true"
+  					new="true"
+  					clear="true"
+            showon="office-yn:1"
+  				/>
+
+        </fieldset>
+
+      </fields>
+    </config>
+</extension>
