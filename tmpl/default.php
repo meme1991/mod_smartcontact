@@ -49,7 +49,7 @@ defined('_JEXEC') or die;
 
     <?php if($show_office) : ?>
       <p class="mb-1">
-        <a href="<?php echo $menu->link ?>" class="link-featured" title="<?php echo $menu->title ?>"><?php echo $menu->title ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <a href="<?php echo $menu->link ?>" class="link-featured" title="<?php echo $menu->title ?>"><?php echo $menu->title ?><i class="far fa-external-link ml-2"></i></a>
       </p>
     <?php endif; ?>
 
