@@ -37,19 +37,19 @@ defined('_JEXEC') or die;
 
     <?php if($show_email) : ?>
       <?php if($email1 != '') : ?>
-      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_EMAIL') ?> <a href="mailto::<?php echo $email1 ?>" class="link-featured" title=""><?php echo $email1 ?></a></p>
+      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_EMAIL') ?> <a href="mailto::<?php echo $email1 ?>"><?php echo $email1 ?></a></p>
       <?php endif; ?>
       <?php if($email2 != '') : ?>
-      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_EMAIL') ?> <a href="mailto::<?php echo $email2 ?>" class="link-featured" title=""><?php echo $email2 ?></a></p>
+      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_EMAIL') ?> <a href="mailto::<?php echo $email2 ?>"><?php echo $email2 ?></a></p>
       <?php endif; ?>
       <?php if($pec != '') : ?>
-      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_PEC') ?> <a href="mailto::<?php echo $pec ?>" class="link-featured" title=""><?php echo $pec ?></a></p>
+      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_PEC') ?> <a href="mailto::<?php echo $pec ?>"><?php echo $pec ?></a></p>
       <?php endif; ?>
     <?php endif; ?>
 
     <?php if($show_office) : ?>
       <p class="mb-1">
-        <a href="<?php echo $menu->link ?>" class="link-featured" title="<?php echo $menu->title ?>"><?php echo $menu->title ?><i class="far fa-external-link ml-2"></i></a>
+        <a href="<?php echo $menu->link ?>" title="<?php echo $menu->title ?>"><?php echo $menu->title ?><i class="far fa-external-link ml-2"></i></a>
       </p>
     <?php endif; ?>
 
