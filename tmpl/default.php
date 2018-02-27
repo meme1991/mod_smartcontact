@@ -37,13 +37,13 @@ defined('_JEXEC') or die;
 
     <?php if($show_email) : ?>
       <?php if($email1 != '') : ?>
-      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_EMAIL') ?> <a href="mailto::<?php echo $email1 ?>"><?php echo $email1 ?></a></p>
+      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_EMAIL') ?> <a href="mailto:<?php echo $email1 ?>"><?php echo $email1 ?></a></p>
       <?php endif; ?>
       <?php if($email2 != '') : ?>
-      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_EMAIL') ?> <a href="mailto::<?php echo $email2 ?>"><?php echo $email2 ?></a></p>
+      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_EMAIL') ?> <a href="mailto:<?php echo $email2 ?>"><?php echo $email2 ?></a></p>
       <?php endif; ?>
       <?php if($pec != '') : ?>
-      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_PEC') ?> <a href="mailto::<?php echo $pec ?>"><?php echo $pec ?></a></p>
+      <p class="mb-1"><?php echo JText::_('MOD_SMARTCONTACT_PEC') ?> <a href="mailto:<?php echo $pec ?>"><?php echo $pec ?></a></p>
       <?php endif; ?>
     <?php endif; ?>
 
