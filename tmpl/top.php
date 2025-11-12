@@ -1,37 +1,26 @@
 <?php
-# @Author: SPEDI srl
-# @Date:   23-01-2018
-# @Email:  sviluppo@spedi.it
-# @Last modified by:   SPEDI srl
-# @Last modified time: 10-12-2019
-# @License: GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
-# @Copyright: Copyright (C) SPEDI srl
-
+/**
+ * Alternate layout: text always at top
+ */
 defined('_JEXEC') or die;
+
+use Joomla\CMS\Language\Text;
+
+$moduleclass = isset($moduleclass_sfx) ? $moduleclass_sfx : '';
+$title = trim($title);
 ?>
-<div class="smartcontact-top">
-  <div class="inline-menu ">
-  	<ul class="list-inline">
-      <?php if($show_address AND $address != '') : ?>
-        <li class="list-inline-item">
-          <i class="fal fa-map-marker-alt pr-2"></i>
-          <?php echo $address ?>
-        </li>
-      <?php endif; ?>
+<div class="mod-smartcontact mod-smartcontact-top <?php echo $moduleclass; ?>">
+    <?php if ($title) : ?>
+        <h3 class="mod-smartcontact-title"><?php echo htmlspecialchars(Text::_($title), ENT_QUOTES, 'UTF-8'); ?></h3>
+    <?php endif; ?>
 
-      <?php if($tel1 != '') : ?>
-        <li class="list-inline-item">
-          <i class="fal fa-phone pr-2"></i>
-          <a href="tel:<?php echo $tel1 ?>"><?php echo $tel1 ?></a>
-        </li>
-      <?php endif; ?>
+    <?php if ($show_text) : ?>
+        <div class="mod-smartcontact-text">
+            <?php echo $text; ?>
+        </div>
+    <?php endif; ?>
 
-      <?php if($email1 != '') : ?>
-        <li class="list-inline-item">
-          <i class="fal fa-paper-plane pr-2"></i>
-          <a href="mailto:<?php echo $email1 ?>"><?php echo $email1 ?></a>
-        </li>
-      <?php endif; ?>
-    </ul>
-  </div>
+    <!-- reuse same list structure as default -->
+    <?php include ModuleHelper::getLayoutPath('mod_smartcontact', 'default'); ?>
 </div>
+
